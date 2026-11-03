@@ -4,57 +4,28 @@
   <title>JavaScript </title>
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width,inital-scale=1.0">
-
-
+</head> <!--Remember to close your tags-->
 
 
 <body>
 <h1>Simple Javascript Page </h1>
-
-</body>
-
-<button onclick="alert('My Name is Chrissy Duncanson')"> Click Me </button>
-
-<script> console.log ("Hello World"); </script>
-
-
+<p id="message"> Click button below!</p>
 <button id="myBtn"> Try It Out</button>
-<script>
-<p id="myBtn"></p>
-document.getElementById ("myBtn")
-.addEventListener("click", displayDate);
-
-function displayDate() { document.getElementByID("demo").innerHTML=Date ()}
-
-</script>
-
 
 
 <script>
-document.getElementById("myBtn").addEventListener("click",displayDate);
-
-function displayDate() {document.getElementById ("demo").innerHTML=Date ()}
-
-
+const button = document.getElementById("myBtn");
+const message = document.getElementById("message");
+        button.addEventListener("click", function() {  //event listeners
+            console.log("Button clicked!");      // logs the button click
+            if (message.innerText === "") {       //looks for the paragraph content
+                message.innerText = "My Name is Chrissy Duncanson";
+            } else {
+                message.innerText = "";
+            }
+        });
 </script>
-
-
-
-<p id="demo"></p>
-
-
-
-
-
-<script>
-
-document.getElementById("demo").innerHTML = "<h2>TEST</h2>";
-console.log("hello from JavaScript");
-    alert("Welcome")
-
-    
-</script>
-
+</body>
 
 
 </html>
